@@ -35,9 +35,9 @@ temat i date) gdy przychodzi nowa poczta.
 %setup -q
 
 %build
-rm missing
+rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 CFLAGS="%{rpmcflags} -I /usr/include/orbit-1.0"
