@@ -2,7 +2,7 @@ Summary:	gbiff checks and informs for mail
 Summary(pl):	Sprawdza i informuje o nowej poczcie
 Name:		gbiff
 Version:	2.4a
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.loria.fr/~rougier/gbiff/%{name}-%{version}.tar.gz
@@ -52,14 +52,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	sysdir=%{_applnkdir}/Network/Mail
 
-gzip -9nf AUTHORS NEWS README ChangeLog THANKS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS NEWS README ChangeLog THANKS
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Network/Mail/*.desktop
 %{_pixmapsdir}/%{name}
