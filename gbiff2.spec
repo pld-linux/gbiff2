@@ -40,6 +40,7 @@ libtoolize --copy --force
 aclocal
 autoconf
 automake -a -c -f
+CFLAGS="%{rpmcflags} -I /usr/include/orbit-1.0"
 %configure
 
 %{__make}
