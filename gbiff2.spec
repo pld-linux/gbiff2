@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	sysdir=%{_applnkdir}/Network/Mail
-	
+
 gzip -9nf AUTHORS NEWS README ChangeLog THANKS
 
 %clean
