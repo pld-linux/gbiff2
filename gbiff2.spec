@@ -38,8 +38,8 @@ temat i date) gdy przychodzi nowa poczta.
 rm missing
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 CFLAGS="%{rpmcflags} -I /usr/include/orbit-1.0"
 %configure
 
