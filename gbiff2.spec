@@ -1,13 +1,12 @@
 Summary:	gbiff checks and informs for mail
 Summary(pl):	Sprawdza i informuje o nowej poczcie
-Name:		gbiff
-Version:	2.4a
-Release:	2
-License:	GPL
-Group:		Applications/Mail
-Source0:	http://www.loria.fr/~rougier/gbiff/%{name}-%{version}.tar.gz
-# Source0-md5:	565fbe268a876d26dddadd5ccd2e1da3
-URL:		http://www.loria.fr/~rougier/gbiff/gbiff.html
+Name:           gbiff2
+Version:        0.4.0
+Release:        1
+License:        GPL
+Group:          Applications/Mail
+Source0:        http://www.loria.fr/~rougier/gbiff/downloads/%{name}-%{version}.tar.gz
+URL:		http://www.loria.fr/~rougier/gbiff/index.php
 BuildRequires:	gnome-libs-devel >= 1.2.13
 BuildRequires:	gtk+-devel >= 1.2.5
 BuildRequires:	automake
