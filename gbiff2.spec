@@ -16,6 +16,7 @@ BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 1.99.6
 BuildRequires:	openssl-devel
 %{?with_gnome:Requires(post):	GConf2}
+Obsoletes:	gbiff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
