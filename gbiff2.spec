@@ -13,7 +13,7 @@ Source0:        http://www.loria.fr/~rougier/gbiff/downloads/%{name}-%{version}.
 # Source0-md5:	5ef36711b26d0dfd4ce42bcd67122218
 URL:		http://www.loria.fr/~rougier/gbiff/index.php
 %{?with_gnome:BuildRequires:	gnome-panel-devel}
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	libglade2-devel >= 1.99.6
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	pkgconfig
