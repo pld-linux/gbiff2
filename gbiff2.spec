@@ -15,7 +15,7 @@ URL:		http://www.loria.fr/~rougier/gbiff/index.php
 %{?with_gnome:BuildRequires:	gnome-panel-devel}
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 1.99.6
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7d
 %{?with_gnome:Requires(post):	GConf2}
 Obsoletes:	gbiff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
