@@ -17,9 +17,7 @@ BuildRequires:	ORBit-devel
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
-%define		_mandir		%{_prefix}/man
 
 %description
 gbiff checks for mail within afile, a qmail or MH style dir, or on a
