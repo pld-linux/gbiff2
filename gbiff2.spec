@@ -3,13 +3,13 @@
 %bcond_without	gnome	# without gnome applet support
 #
 Summary:	gbiff checks and informs for mail
-Summary(pl):	Sprawdza i informuje o nowej poczcie
-Name:           gbiff2
-Version:        0.4.0
-Release:        1
+Summary(pl):	Sprawdzanie i informowanie o nowej poczcie
+Name:		gbiff2
+Version:	0.4.0
+Release:	1
 License:	GPL
-Group:          Applications/Mail
-Source0:        http://www.loria.fr/~rougier/gbiff/downloads/%{name}-%{version}.tar.gz
+Group:		Applications/Mail
+Source0:	http://www.loria.fr/~rougier/gbiff/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	5ef36711b26d0dfd4ce42bcd67122218
 URL:		http://www.loria.fr/~rougier/gbiff/index.php
 %{?with_gnome:BuildRequires:	gnome-panel-devel}
