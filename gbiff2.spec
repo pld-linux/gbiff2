@@ -15,7 +15,6 @@ BuildRequires:	autoconf
 BuildRequires:	libtool
 BuildRequires:	perl
 BuildRequires:	ORBit-devel
-Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
