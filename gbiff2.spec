@@ -27,7 +27,7 @@ date) when new mail has arrived.
 %description -l pl
 gbiff sprawdza pocztê wewn±trz plików, katalogów w stylu qmaila lub MH
 lub na serwerze POP3. Potrafi wy¶wietlaæ nag³ówki (liczbê, autora,
-temat i date) gdy przychodzi nowa poczta.
+temat i datê) gdy przychodzi nowa poczta.
 
 %prep
 %setup -q
