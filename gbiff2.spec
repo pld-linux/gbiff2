@@ -7,7 +7,7 @@ Summary(pl):	Sprawdza i informuje o nowej poczcie
 Name:           gbiff2
 Version:        0.4.0
 Release:        1
-License:        GPL
+License:	GPL
 Group:          Applications/Mail
 Source0:        http://www.loria.fr/~rougier/gbiff/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	5ef36711b26d0dfd4ce42bcd67122218
