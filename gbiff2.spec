@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	gnome	# without gnome applet support
+#
 Summary:	gbiff checks and informs for mail
 Summary(pl):	Sprawdza i informuje o nowej poczcie
 Name:           gbiff2
@@ -7,16 +11,12 @@ License:        GPL
 Group:          Applications/Mail
 Source0:        http://www.loria.fr/~rougier/gbiff/downloads/%{name}-%{version}.tar.gz
 URL:		http://www.loria.fr/~rougier/gbiff/index.php
-BuildRequires:	gnome-libs-devel >= 1.2.13
-BuildRequires:	gtk+-devel >= 1.2.5
-BuildRequires:	automake
-BuildRequires:	autoconf
-BuildRequires:	libtool
-BuildRequires:	perl
-BuildRequires:	ORBit-devel
+%{?with_gnome:BuildRequires:	gnome-panel-devel}
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	libglade2-devel >= 1.99.6
+BuildRequires:	openssl-devel
+%{?with_gnome:Requires(post):	GConf2}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_sysconfdir	/etc/X11/GNOME
 
 %description
 gbiff checks for mail within afile, a qmail or MH style dir, or on a
@@ -32,13 +32,9 @@ temat i datê) gdy przychodzi nowa poczta.
 %setup -q
 
 %build
-rm -f missing
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
-CFLAGS="%{rpmcflags} -I /usr/include/orbit-1.0"
-%configure
+%configure \
+	%{?with_gnome:--with-gnome} \
+	--disable-schema-install
 
 %{__make}
 
@@ -47,16 +43,28 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	sysdir=%{_applnkdir}/Network/Mail
+	GCONFTOOL=true
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%if %{with gnome}
+%post
+%gconf_schema_install
+%endif
+
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS NEWS README ChangeLog THANKS
-%attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Network/Mail/*.desktop
-%{_pixmapsdir}/%{name}
-%{_datadir}/sounds/%{name}
-%{_sysconfdir}/CORBA/servers/*
+%doc AUTHORS ChangeLog NEWS README THANKS
+%attr(755,root,root) %{_bindir}/gbiff2
+%{_datadir}/gbiff2
+%{_datadir}/sounds/gbiff2
+%{_pixmapsdir}/*.png
+%{_mandir}/man1/*
+%if %{with gnome}
+%{_sysconfdir}/gconf/schemas/*.schemas
+%{_libdir}/bonobo/servers/*.server
+%{_datadir}/gnome-2.0/ui/*.xml
+%endif
