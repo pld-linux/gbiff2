@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.loria.fr/~rougier/gbiff/%{name}-%{version}.tar.gz
+# Source0-md5:	565fbe268a876d26dddadd5ccd2e1da3
 URL:		http://www.loria.fr/~rougier/gbiff/gbiff.html
 BuildRequires:	gnome-libs-devel >= 1.2.13
 BuildRequires:	gtk+-devel >= 1.2.5
