@@ -5,9 +5,6 @@ Version:	2.4a
 Release:	1
 License:	GPL
 Group:		Applications/Mail
-Group(de):	Applikationen/Post
-Group(pl):	Aplikacje/Poczta
-Group(pt):	Aplicações/Correio Eletrônico
 Source0:	http://www.loria.fr/~rougier/gbiff/%{name}-%{version}.tar.gz
 URL:		http://www.loria.fr/~rougier/gbiff/gbiff.html
 BuildRequires:	gnome-libs-devel >= 1.2.13
