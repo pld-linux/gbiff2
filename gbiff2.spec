@@ -3,7 +3,7 @@
 %bcond_without	gnome	# without gnome applet support
 #
 Summary:	gbiff checks and informs for mail
-Summary(pl):	Sprawdzanie i informowanie o nowej poczcie
+Summary(pl.UTF-8):   Sprawdzanie i informowanie o nowej poczcie
 Name:		gbiff2
 Version:	0.4.0
 Release:	1
@@ -27,10 +27,10 @@ gbiff checks for mail within afile, a qmail or MH style dir, or on a
 POP3 server. It can display headers (number, sender, subject, and
 date) when new mail has arrived.
 
-%description -l pl
-gbiff sprawdza pocztê wewn±trz plików, katalogów w stylu qmaila lub MH
-lub na serwerze POP3. Potrafi wy¶wietlaæ nag³ówki (liczbê, autora,
-temat i datê) gdy przychodzi nowa poczta.
+%description -l pl.UTF-8
+gbiff sprawdza pocztÄ™ wewnÄ…trz plikÃ³w, katalogÃ³w w stylu qmaila lub MH
+lub na serwerze POP3. Potrafi wyÅ›wietlaÄ‡ nagÅ‚Ã³wki (liczbÄ™, autora,
+temat i datÄ™) gdy przychodzi nowa poczta.
 
 %prep
 %setup -q
