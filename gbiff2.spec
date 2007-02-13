@@ -3,7 +3,7 @@
 %bcond_without	gnome	# without gnome applet support
 #
 Summary:	gbiff checks and informs for mail
-Summary(pl.UTF-8):   Sprawdzanie i informowanie o nowej poczcie
+Summary(pl.UTF-8):	Sprawdzanie i informowanie o nowej poczcie
 Name:		gbiff2
 Version:	0.4.0
 Release:	1
